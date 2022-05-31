@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/zamowienie_picture"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/chair"
+                android:backgroundTint="#737681"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/szczegolyZamowieniaPlainText"
+                android:layout_width="233dp"
+                android:layout_height="42dp"
+                android:layout_alignTop="@+id/zamowienie_picture"
+                android:layout_alignBottom="@+id/zamowienie_picture"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="3dp"
+                android:layout_toEndOf="@+id/zamowienie_picture"
+                android:gravity="center_vertical"
+                android:text="Szczegóły zamówienia"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nested_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zamowienie_picture"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:padding="4dp"
+                tools:listitem="@layout/orders_child_adapter" />
+
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

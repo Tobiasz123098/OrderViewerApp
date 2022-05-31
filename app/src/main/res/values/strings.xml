@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DomartStyl</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="haslo_hint">Hasło</string>
+    <string name="zaloguj_text">Zaloguj</string>
+    <string name="potwierdzenie_hasla">Potwierdź hasło</string>
+    <string name="rejestracja_info">Jeżeli nie masz konta</string>
+    <string name="rejestracja_text">zarejestruj się.</string>
+    <string name="numer_zamowienia">Zamówienie nr</string>
+
+    <string name="all">Wszystkie</string>
+    <string name="completed">Zakończone</string>
+    <string name="in_process">W trakcie realizacji</string>
+    <string name="out_for_delivery">Wyjechało</string>
+    <string name="ready">Gotowe</string>
+    <string name="partially_shipped">Częściowo wyjechało</string>
+
+    <string-array name="status_array">
+        <item>Wszystkie</item>
+        <item>Zakończone</item>
+        <item>W trakcie realizacji</item>
+        <item>Wyjechało</item>
+        <item>Gotowe</item>
+        <item>Częściowo wyjechało</item>
+    </string-array>
+</resources>

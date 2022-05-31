@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+    tools:context=".RegistrationActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_email_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="280dp"
+        android:elevation="2dp"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@android:drawable/sym_action_email"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10sp"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_password_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="360sp"
+        android:layout_marginEnd="40sp"
+        android:layout_marginBottom="-400sp"
+        android:elevation="2dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#93AF17"
+        app:startIconDrawable="@android:drawable/ic_secure"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:padding="10sp"
+            android:singleLine="true"
+            android:hint="@string/haslo_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_password1_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="440sp"
+        android:layout_marginEnd="40sp"
+        android:layout_marginBottom="-400sp"
+        android:elevation="2dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#93AF17"
+        app:startIconDrawable="@android:drawable/ic_secure"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password1EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/potwierdzenie_hasla"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/registrationPrzycisk"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/input_password1_registration"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="105sp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="106sp"
+        android:background="@drawable/rounded_corner_view"
+        android:backgroundTint="#93AF17"
+        android:text="Zarejestruj"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:layout_marginBottom="-250sp"
+        android:background="@drawable/bg" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="111dp"
+        android:background="@drawable/logo" />
+
+</RelativeLayout>
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+-->

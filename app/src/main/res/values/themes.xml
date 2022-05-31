@@ -1,0 +1,42 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GoogleSignInApplication" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionBarSize">70sp</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary" tools:ignore="DuplicateDefinition">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/control_normal</item>
+        <item name="colorControlActivated">@color/control_activated</item>
+    </style>
+
+    <style name="spinnerStyle" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:padding">15sp</item>
+        <item name="android:background">#CC1855</item>
+        <item name="android:gravity">center_vertical</item>
+
+    </style>
+
+    <style name="Theme.GoogleSignInApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.GoogleSignInApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textColorHint">@color/control_normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="hintTextColor">@color/control_normal</item>
+        <item name="endIconTint">#93AF17</item>
+    </style>
+
+</resources>

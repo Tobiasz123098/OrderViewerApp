@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="order" type="com.example.domartorders.Order"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CFD3E1"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="16sp"
+            android:padding="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:elevation="40dp"
+                    android:text="TextView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:layout_constraintBottom_toBottomOf="@+id/orderNumberTextView"
+                    app:layout_constraintEnd_toEndOf="@+id/orderNumberTextView"
+                    app:layout_constraintHorizontal_bias="0.03"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/orderNumberTextView"
+                    app:layout_constraintVertical_bias="0.641" />
+
+                <TextView
+                    android:id="@+id/orderNumberTextView"
+                    android:layout_width="392dp"
+                    android:layout_height="86dp"
+                    android:layout_marginStart="16dp"
+                    android:padding="16dp"
+                    android:text="@string/numer_zamowienia"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.333"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="135dp"
+                    android:layout_height="62dp"
+                    android:gravity="left"
+                    android:padding="16dp"
+                    android:text="TextView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/expandableLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.634"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="44dp"
+                    android:layout_height="56dp"
+                    android:backgroundTint="@color/white"
+                    android:tint="@color/dom_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/orderNumberTextView"
+                    app:layout_constraintEnd_toEndOf="@+id/orderNumberTextView"
+                    app:layout_constraintHorizontal_bias="0.223"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1"
+                    app:layout_constraintVertical_bias="0.533"
+                    app:srcCompat="@drawable/unfold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandableLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderNumberTextView">
+
+
+                    <TextView
+                        android:id="@+id/cenaBruttoTextView"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="345dp"
+                        android:background="@drawable/money"
+                        android:backgroundTint="#737681"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toStartOf="@+id/plotTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/plotTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="TextView"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/wartoscBruttoText"
+                        app:layout_constraintStart_toEndOf="@+id/cenaBruttoTextView"
+                        app:layout_constraintTop_toTopOf="@+id/cenaBruttoTextView" />
+
+                    <TextView
+                        android:id="@+id/walutaTextView_validate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="TextView"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toTopOf="@+id/wartoscBruttoText"
+                        app:layout_constraintStart_toEndOf="@+id/plotTextView"
+                        app:layout_constraintTop_toTopOf="@+id/cenaBruttoTextView" />
+
+                    <TextView
+                        android:id="@+id/wartoscBruttoText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Wartość brutto"
+                        android:textAlignment="center"
+                        android:textColor="#0F66B4"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cenaBruttoTextView"
+                        app:layout_constraintStart_toEndOf="@+id/cenaBruttoTextView"
+                        app:layout_constraintTop_toTopOf="@+id/plotTextView" />
+
+                    <TextView
+                        android:id="@+id/formaZaplatyText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Forma zapłaty"
+                        android:textColor="#0F66B4"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toTopOf="@+id/adres_picture"
+                        app:layout_constraintStart_toEndOf="@+id/cenaBruttoTextView"
+                        app:layout_constraintTop_toTopOf="@+id/wartoscBruttoText"
+                        app:layout_constraintVertical_bias="0.687" />
+
+                    <TextView
+                        android:id="@+id/formaZaplatyTextView_validate"
+                        android:layout_width="139dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="Forma zapłaty"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toTopOf="@+id/formaZaplatyText"
+                        app:layout_constraintStart_toStartOf="@+id/formaZaplatyText" />
+
+                    <TextView
+                        android:id="@+id/adres_picture"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/bus"
+                        android:backgroundTint="#737681"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cenaBruttoTextView" />
+
+                    <TextView
+                        android:id="@+id/adresTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="TextView"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:autoSizeMinTextSize="12sp"
+                        app:autoSizeStepGranularity="2sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="@+id/adres_picture"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/adres_picture"
+                        app:layout_constraintTop_toTopOf="@+id/adres_picture" />
+
+
+                    <TextView
+                        android:id="@+id/adresPlainText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Adres"
+                        android:textColor="#0F66B4"
+                        android:textSize="12dp"
+                        app:layout_constraintStart_toEndOf="@+id/adres_picture"
+                        app:layout_constraintTop_toBottomOf="@+id/adresTextView" />
+
+                    <TextView
+                        android:id="@+id/dostawa_picture"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/location"
+                        android:backgroundTint="#737681"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/adres_picture" />
+
+                    <TextView
+                        android:id="@+id/rodzajDostawyText_validate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="TextView"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dostawa_picture"
+                        app:layout_constraintStart_toEndOf="@+id/dostawa_picture"
+                        app:layout_constraintTop_toTopOf="@+id/dostawa_picture"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/dostawaPlainText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Dostawa"
+                        android:textColor="#0F66B4"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dostawa_picture"
+                        app:layout_constraintStart_toEndOf="@+id/dostawa_picture"
+                        app:layout_constraintTop_toBottomOf="@+id/rodzajDostawyText_validate" />
+
+                    <TextView
+                        android:id="@+id/zamowienie_pictureee"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/chair"
+                        android:backgroundTint="#737681"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/dostawa_picture" />
+
+                    <TextView
+                        android:id="@+id/szczegolyZamowieniaPlainTexttt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Szczegóły zamówienia"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/zamowienie_pictureee"
+                        app:layout_constraintStart_toEndOf="@+id/zamowienie_pictureee"
+                        app:layout_constraintTop_toTopOf="@+id/zamowienie_pictureee" />
+
+                    <TextView
+                        android:id="@+id/calendar_picture"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20sp"
+                        android:background="@drawable/calendar"
+                        android:backgroundTint="#737681"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/child_rv" />
+
+                    <TextView
+                        android:id="@+id/data_przyjecia_zamowienia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="TextView"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toEndOf="@+id/calendar_picture"
+                        app:layout_constraintTop_toTopOf="@+id/calendar_picture" />
+
+                    <TextView
+                        android:id="@+id/data_przyjecia_zamowieniaPlainText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Data przyjęcia zamówienia"
+                        android:textColor="#0F66B4"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/calendar_picture"
+                        app:layout_constraintStart_toEndOf="@+id/calendar_picture"
+                        app:layout_constraintTop_toBottomOf="@+id/data_przyjecia_zamowienia"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/person_picture"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/person"
+                        android:backgroundTint="#737681"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/calendar_picture" />
+
+                    <TextView
+                        android:id="@+id/zamawiajacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="TextView"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:autoSizeMinTextSize="12sp"
+                        app:autoSizeStepGranularity="2sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="@+id/person_picture"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/person_picture"
+                        app:layout_constraintTop_toTopOf="@+id/person_picture" />
+
+                    <TextView
+                        android:id="@+id/zamawiajacyPlainText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Zamawiający"
+                        android:textColor="#0F66B4"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/person_picture"
+                        app:layout_constraintTop_toBottomOf="@+id/zamawiajacy" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/child_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/zamowienie_pictureee" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
